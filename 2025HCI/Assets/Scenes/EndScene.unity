@@ -475,7 +475,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1359866918}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.901
+  m_Size: 0.6906081
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1633,7 +1633,7 @@ MonoBehaviour:
   contentRoot: {fileID: 154915352}
   itemPrefab: {fileID: 7653926058543364174, guid: 19dadc79be9d08242baca6b3959c4633, type: 3}
   hotSearchConfig: {fileID: 11400000, guid: d83c74d03ab531a4d9371ac053bd2b8f, type: 2}
-  useDebugRandomResult: 1
+  useDebugRandomResult: 0
   popFiller: {fileID: 1312618046}
   cpFiller: {fileID: 1538953829}
   settlementImage: {fileID: 1802151073}

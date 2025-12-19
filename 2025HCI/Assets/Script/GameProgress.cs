@@ -176,7 +176,7 @@ public class GameProgress : MonoBehaviour
 
         Debug.Log($"[GameProgress] 开始处理事件 index={index}");
 
-        // 1) 触发 warning（如果配置了）
+        // 1) 触发 warning
         if (index >= 0 && index < warningEvents.Count)
         {
             var we = warningEvents[index];
@@ -188,7 +188,6 @@ public class GameProgress : MonoBehaviour
         }
         else
         {
-            // 如果 warningEvents 少于 index，不一定是错误（你可能只用同一 index 的 danmaku 部分）
             Debug.Log($"[GameProgress] Warning 不存在或未配置（index={index}）");
         }
 
@@ -196,7 +195,7 @@ public class GameProgress : MonoBehaviour
         StartFacialDetection = true;
         flowchart.SetBooleanVariable(FungusStartFacialVar, true);
 
-        // 2) 等待表情识别（脚本负责）—— 如果你希望有超时可以在这里加入超时逻辑
+        // 2) 等待表情识别（脚本负责）—— 可以在这里加入超时逻辑
         // 默认策略：当 currentFacialExpression != None 时视为识别完成
         yield return new WaitUntil(() => currentFacialExpression != FacialExpression.None);
 
@@ -217,18 +216,18 @@ public class GameProgress : MonoBehaviour
         if (index >= 0 && index < danmakuEvents.Count)
         {
             TriggerDanmakuEventByIndex(index, detected);
-
             //人物做表情
             string expression = detected.ToString();
             flowchart.ExecuteBlock(expression);
             //warning取消
             DestroyWarning();
 
-            bool burstFinished = false;
+            //-----------等待逻辑----------------
+            //bool burstFinished = false;
             // 订阅一次性事件
-            spawner.OnBurstFinished += () => burstFinished = true;
+            //spawner.OnBurstFinished += () => burstFinished = true;
             // 等待直到弹幕发完
-            yield return new WaitUntil(() => burstFinished);
+            //yield return new WaitUntil(() => burstFinished);
 
             Debug.Log("全部弹幕发送完毕，继续 Fungus 流程");
         }
@@ -295,22 +294,18 @@ public class GameProgress : MonoBehaviour
     //数值处理函数
     private void ApplyExpressionEffect(int eventIndex, FacialExpression expression)
     {
-        // 何意味 用 LINQ 查配置
-        var config = eventExpressionEffects
-            .FirstOrDefault(e => e.index == eventIndex);
-
-        if (config == null)
+        // 1) 安全检查：确保索引在列表范围内
+        if (eventIndex < 0 || eventIndex >= eventExpressionEffects.Count)
         {
-            Debug.Log($"[GameProgress] 未配置事件 index={eventIndex} 的数值变化");
+            Debug.LogWarning($"[GameProgress] 事件索引 {eventIndex} 越界或未在 eventExpressionEffects 列表中配置。");
             return;
         }
 
-        //var effect = config.expressionEffects
-        //    .FirstOrDefault(e => e.expression == expression);
+        // 2) 直接通过列表索引获取配置（不再需要查找 index 变量）
+        var config = eventExpressionEffects[eventIndex];
 
+        // 3) 根据表情获取具体的数值效果
         var effect = config.GetEffect(expression);
-
-
         if (effect == null)
         {
             Debug.Log($"[GameProgress] 事件 index={eventIndex} 未配置表情 {expression} 的数值变化");
@@ -325,7 +320,7 @@ public class GameProgress : MonoBehaviour
             PlayerStatsManager.Instance.AddCPHeat(effect.cpHeatChange);
         }
 
-        // ===== 人设加分（支持多个）=====
+        // ===== 人设加分 =====
         if (effect.personaChanges != null && effect.personaChanges.Count > 0)
         {
             foreach (var change in effect.personaChanges)

@@ -53,7 +53,7 @@ public class WarningEvent
 public class EventExpressionEffect
 {
     [Header("事件信息")]
-    public int index;
+    //public int index;
     public string eventName;
 
     [Header("Neutral（中性）")]

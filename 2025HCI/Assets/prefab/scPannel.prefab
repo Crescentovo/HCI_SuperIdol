@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatarImage: {fileID: 3635178091978759809}
   messageText: {fileID: 8762053484783997745}
-  autoDestroyTime: 3
+  autoDestroyTime: 10
 --- !u!114 &1687223633956235900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,8 +222,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 54.9, y: -20.7}
-  m_SizeDelta: {x: 276.3868, y: 85.8656}
+  m_AnchoredPosition: {x: 53.49131, y: -22.108719}
+  m_SizeDelta: {x: 279.2042, y: 131.8827}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6582190762632556294
 CanvasRenderer:
@@ -266,4 +266,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u54E5\u54E5\u4EEC\u8F9B\u82E6\u4E86\uFF0C\u6211\u4EEC\u6C38\u8FDC\u652F\u6301\u4F60\u4EEC\uFF01"
+  m_Text: "\u54E5\u54E5\u4EEC\u8F9B\u82E6\u4E86\uFF0C\u6211\u4EEC\u6C38\u8FDC\u652F\u6301\u4F60\u4EEC\uFF01aaaaaaaaaaaaaaaaaaaa"
