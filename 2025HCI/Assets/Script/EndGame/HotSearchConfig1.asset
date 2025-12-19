@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcfd63dea696ab242925592764f5052c, type: 3}
+  m_Name: HotSearchConfig1
+  m_EditorClassIdentifier: 
+  tierCMax: 2
+  tierBMax: 5
+  tierAMax: 10
+  popularityHotSearch:
+    categoryName: "\u4EBA\u6C14"
+    tierConfigs:
+    - tier: 0
+      fixedEntry:
+        content: "#Nexus\u79C1\u4E0B\u4E0D\u548C#"
+      randomEntries:
+      - content: "#\u82CF\u7FCA \u76F4\u64AD\u9ED1\u8138#"
+      - content: "#Nexus\u5E72\u5B8C\u8FD9\u7968\u4E0D\u5E72\u4E86#"
+      - content: "#Nexus\u76F4\u64AD \u7537\u56E2\u5B66\u73B0\u573A#"
+    - tier: 1
+      fixedEntry:
+        content: "#Nexus\u76F4\u64AD#"
+      randomEntries:
+      - content: "#Nexus\u5403\u51CF\u8102\u9910#"
+      - content: "#Nexus\u6F14\u6211\u4E0A\u73ED#"
+      - content: "#i\u4EBA\u662F\u7FCA\u4EBA\u7684\u73A9\u5177#"
+    - tier: 2
+      fixedEntry:
+        content: AF
+      randomEntries:
+      - content: AAA
+      - content: AAA
+      - content: AAA
+    - tier: 3
+      fixedEntry:
+        content: SF
+      randomEntries:
+      - content: SS
+      - content: SS
+  cpHotSearch:
+    categoryName: CP
+    tierConfigs:
+    - tier: 0
+      fixedEntry:
+        content: "#\u82CF\u7FCA \u5168\u9EA6\u9762\u5305#"
+      randomEntries:
+      - content: "#\u7FCA\u661F\u7FCA\u610F \u642D\u80A9#"
+    - tier: 1
+      fixedEntry:
+        content: BF
+      randomEntries:
+      - content: BB
+    - tier: 2
+      fixedEntry:
+        content: AF
+      randomEntries:
+      - content: AA
+    - tier: 3
+      fixedEntry:
+        content: SF
+      randomEntries:
+      - content: SS
