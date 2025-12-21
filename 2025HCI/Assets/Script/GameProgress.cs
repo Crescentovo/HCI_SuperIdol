@@ -110,7 +110,7 @@ public class GameProgress : MonoBehaviour
     private void Start()
     {
         PlayerStatsManager.Instance.SetChapter(1); // 初始化章节为 1
-        AudioManager.Instance.PlayBGMByName("BGM_Chapter1"); // 播放主背景音乐
+       AudioManager.Instance.PlayBGMByName("BGM_Chapter1"); // 播放主背景音乐
     }
 
 
