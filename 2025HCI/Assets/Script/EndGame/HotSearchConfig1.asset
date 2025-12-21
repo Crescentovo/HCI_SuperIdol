@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tierCMax: 2
   tierBMax: 5
-  tierAMax: 10
+  tierAMax: 8
   popularityHotSearch:
     categoryName: "\u4EBA\u6C14"
     tierConfigs:
@@ -55,16 +55,18 @@ MonoBehaviour:
       - content: "#\u7FCA\u661F\u7FCA\u610F \u642D\u80A9#"
     - tier: 1
       fixedEntry:
-        content: BF
+        content: "#\u82CF\u7FCA\u97E9\u9038\u5B81\u907F\u5ACC#"
       randomEntries:
-      - content: BB
+      - content: "#\u82CF\u7FCA\u72EC\u7F8E#"
+      - content: "#\u82CF\u7FCA\u82CF\u97E9\u9038\u5B81\u5168\u7A0B\u65E0\u5BF9\u89C6#"
     - tier: 2
       fixedEntry:
-        content: AF
+        content: "#\u82CF\u7FCA \u7AEF\u5982\u6C34#"
       randomEntries:
-      - content: AA
+      - content: 
     - tier: 3
       fixedEntry:
-        content: SF
+        content: "#\u82CF\u5B81\u7FCA\u8D2D 99#"
       randomEntries:
-      - content: SS
+      - content: "#\u82CF\u5B81\u7FCA\u8D2D \u642D\u80A9#"
+      - content: "#\u82CF\u5B81\u7FCA\u8D2D \u4E00\u773C\u4E07\u5E74#"

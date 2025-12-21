@@ -23,8 +23,13 @@ public class SettlementHotSearchView : MonoBehaviour
     [Header("结算图")]
     [SerializeField] private Image settlementImage;
 
+    [Header("Music")]
+    [SerializeField] private AudioClip settlementBGM;
+
     private void OnEnable()
     {
+        AudioManager.Instance.PlayMusic(settlementBGM); // 播放背景音乐
+
         // ===== Debug 模式下自动生成测试数据 =====
         if (useDebugRandomResult || GameResultCache.LastResult == null)
         {
@@ -150,19 +155,20 @@ public class SettlementHotSearchView : MonoBehaviour
 
     private void BuildList(List<HotSearchResultEntry> entries)
     {
-        foreach (var entry in entries)
+        for (int i = 0; i < entries.Count; i++)
         {
+            var entry = entries[i];
+            int rank = i + 1;
+
             var item = Instantiate(itemPrefab, contentRoot);
 
-            item.Init(
-                rank: entry.rank,
-                //tag: entry.tag,
-                content: entry.content,
-                highlight: entry.highlight
+            item.Bind(entry, rank);
 
-            );
+            // 如果你要做逐条显示动画，这里先隐藏
+            //item.gameObject.SetActive(false);
         }
     }
+
 
     private IEnumerator ShowSequentially()
     {

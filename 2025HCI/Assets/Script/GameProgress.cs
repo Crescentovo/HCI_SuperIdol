@@ -110,6 +110,7 @@ public class GameProgress : MonoBehaviour
     private void Start()
     {
         PlayerStatsManager.Instance.SetChapter(1); // 初始化章节为 1
+        AudioManager.Instance.PlayBGMByName("BGM_Chapter1"); // 播放主背景音乐
     }
 
 
@@ -177,6 +178,8 @@ public class GameProgress : MonoBehaviour
         Debug.Log($"[GameProgress] 开始处理事件 index={index}");
 
         // 1) 触发 warning
+        AudioManager.Instance.PlaySFXByName("Focus");
+        //AudioManager.Instance.PlaySFXByName("Warning");
         if (index >= 0 && index < warningEvents.Count)
         {
             var we = warningEvents[index];
