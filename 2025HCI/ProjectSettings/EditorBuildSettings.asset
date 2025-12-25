@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: d405de0025948ab42b3bba5ed6964367
-  - enabled: 0
+  - enabled: 1
     path: Assets/OpenCVForUnity/Examples/OpenCVForUnityExample.unity
     guid: c1089b6c5cb5b0742be92732f5bdc172
-  - enabled: 0
+  - enabled: 1
     path: Assets/OpenCVForUnity/Examples/ShowLicense.unity
     guid: eb34810e3e19dc345b1f0be0bf793d5f
-  - enabled: 0
+  - enabled: 1
     path: Assets/OpenCVForUnity/Examples/ShowSystemInfo.unity
     guid: 42ae57bf137440946a42849763a28437
   - enabled: 0
@@ -92,7 +92,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/OpenCVForUnity/Examples/MainModules/dnn/FaceDetectionYuNetV2Example/FaceDetectionYuNetV2Example.unity
     guid: 606de2379c4c79e4b99a3bb4750a822f
-  - enabled: 0
+  - enabled: 1
     path: Assets/OpenCVForUnity/Examples/MainModules/dnn/FacialExpressionRecognitionExample/FacialExpressionRecognitionExample.unity
     guid: 4de4fc85b9ee62940959593f0ceafd34
   - enabled: 0

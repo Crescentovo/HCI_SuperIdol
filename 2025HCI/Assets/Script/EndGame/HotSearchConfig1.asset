@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcfd63dea696ab242925592764f5052c, type: 3}
   m_Name: HotSearchConfig1
   m_EditorClassIdentifier: 
-  tierCMax: 2
-  tierBMax: 5
-  tierAMax: 8
+  tierCMax: -5
+  tierBMax: 0
+  tierAMax: 5
   popularityHotSearch:
     categoryName: "\u4EBA\u6C14"
     tierConfigs:
@@ -23,28 +23,33 @@ MonoBehaviour:
         content: "#Nexus\u79C1\u4E0B\u4E0D\u548C#"
       randomEntries:
       - content: "#\u82CF\u7FCA \u76F4\u64AD\u9ED1\u8138#"
-      - content: "#Nexus\u5E72\u5B8C\u8FD9\u7968\u4E0D\u5E72\u4E86#"
+      - content: "#Nexus\u5E72\u4E0D\u4E86\u56E2\u5C31\u89E3\u6563#"
       - content: "#Nexus\u76F4\u64AD \u7537\u56E2\u5B66\u73B0\u573A#"
+      - content: "#\u8131\u7C89#"
     - tier: 1
       fixedEntry:
         content: "#Nexus\u76F4\u64AD#"
       randomEntries:
-      - content: "#Nexus\u5403\u51CF\u8102\u9910#"
-      - content: "#Nexus\u6F14\u6211\u4E0A\u73ED#"
-      - content: "#i\u4EBA\u662F\u7FCA\u4EBA\u7684\u73A9\u5177#"
+      - content: "#Nexus\u56E2\u7EFC#"
+      - content: "#\u4E0D\u662F\u56DB\u8C61\u9650\u662F\u56DB\u72D7\u5228#"
+      - content: "#\u82CF\u7FCA\u56DE\u5E94\u6574\u5BB9#"
     - tier: 2
       fixedEntry:
-        content: AF
+        content: "#Nexus\u76F4\u64AD#"
       randomEntries:
-      - content: AAA
-      - content: AAA
-      - content: AAA
+      - content: "#Nexus\u56E2\u7EFC#"
+      - content: "#\u4E0D\u662F\u56DB\u8C61\u9650\u662F\u56DB\u72D7\u5228#"
+      - content: "#\u82CF\u7FCA\u56DE\u5E94\u6574\u5BB9#"
     - tier: 3
       fixedEntry:
-        content: SF
+        content: "#Nexus\u821E\u53F0\u7B79\u5907\u4E2D#"
       randomEntries:
-      - content: SS
-      - content: SS
+      - content: "#\u82CF\u7FCA \u6551\u573A#"
+      - content: "#Nexus\u9080\u4F60\u4E00\u8D77\u6253\u5361#"
+      - content: "#Nexus\u6D3B\u4EBA\u611F\u7537\u56E2#"
+      - content: "#\u4E0D\u662F\u56DB\u8C61\u9650\u662F\u56DB\u72D7\u5228#"
+      - content: "#\u65B0\u6B4C#"
+      - content: "#Nexus\u6F14\u5531\u4F1A\u7968#"
   cpHotSearch:
     categoryName: CP
     tierConfigs:
@@ -52,18 +57,19 @@ MonoBehaviour:
       fixedEntry:
         content: "#\u82CF\u7FCA \u5168\u9EA6\u9762\u5305#"
       randomEntries:
-      - content: "#\u7FCA\u661F\u7FCA\u610F \u642D\u80A9#"
+      - content: "#\u7FCA\u661F\u7FCA\u610F#"
+      - content: "#\u82CF\u7FCA \u6402\u5B8C\u4F60\u7684\u6402\u4F60\u7684#"
     - tier: 1
       fixedEntry:
-        content: "#\u82CF\u7FCA\u97E9\u9038\u5B81\u907F\u5ACC#"
+        content: "#\u82CF\u7FCA\u51B7\u50B2\u9000\u961F\u53CB#"
       randomEntries:
       - content: "#\u82CF\u7FCA\u72EC\u7F8E#"
-      - content: "#\u82CF\u7FCA\u82CF\u97E9\u9038\u5B81\u5168\u7A0B\u65E0\u5BF9\u89C6#"
+      - content: "#\u82CF\u7FCA\u97E9\u9038\u5B81\u907F\u5ACC#"
     - tier: 2
       fixedEntry:
         content: "#\u82CF\u7FCA \u7AEF\u5982\u6C34#"
       randomEntries:
-      - content: 
+      - content: "#\u82CF\u7FCA \u6402\u5B8C\u4F60\u7684\u6402\u4F60\u7684#"
     - tier: 3
       fixedEntry:
         content: "#\u82CF\u5B81\u7FCA\u8D2D 99#"

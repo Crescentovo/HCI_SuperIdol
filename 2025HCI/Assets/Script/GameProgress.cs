@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using Fungus;
+using OpenCVForUnity.CoreModule;
+using OpenCVForUnity.UnityIntegration.Worker.DnnModule;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using Fungus;
 using System.Linq;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // 游戏进度管理器：负责协调事件触发、表情检测和弹幕发送
@@ -33,8 +35,11 @@ public class GameProgress : MonoBehaviour
     [SerializeField]
     private List<EventExpressionEffect> eventExpressionEffects = new List<EventExpressionEffect>();
 
+    [Header("面部表情检测")]
+    public EmotionStabilityDetector emotionDetector;
+    public FacialExpressionRecognizer facialRecognizer;
 
-    
+
 
 
     // 面部表情检测状态
@@ -110,7 +115,7 @@ public class GameProgress : MonoBehaviour
     private void Start()
     {
         PlayerStatsManager.Instance.SetChapter(1); // 初始化章节为 1
-       AudioManager.Instance.PlayBGMByName("BGM_Chapter1"); // 播放主背景音乐
+        AudioManager.Instance.PlayBGMByName("BGM_Chapter1"); // 播放主背景音乐
     }
 
 
@@ -135,30 +140,6 @@ public class GameProgress : MonoBehaviour
         {
             GoToSettlement();
         }
-
-
-        //// 仅用于测试：如果 TriggerNow 为 true，则触发并关闭它
-        //for (int i = 0; i < danmakuEvents.Count; i++)
-        //{
-        //    if (danmakuEvents[i].TriggerNow)
-        //    {
-        //        TriggerDanmakuEventByIndex(i);
-        //        danmakuEvents[i].TriggerNow = false; // 重置开关
-        //    }
-        //}
-        //for (int i = 0; i < warningEvents.Count; i++)
-        //{
-        //    if (warningEvents[i].TriggerNow)
-        //    {
-        //        TriggerWarningEventByIndex(i);
-        //        warningEvents[i].TriggerNow = false; // 重置开关
-        //    }
-        //    if (warningEvents[i].DestroyNow)
-        //    {
-        //        DestroyWarning();
-        //        warningEvents[i].DestroyNow = false; // 重置开关
-        //    }
-        //}
 
     }
 
