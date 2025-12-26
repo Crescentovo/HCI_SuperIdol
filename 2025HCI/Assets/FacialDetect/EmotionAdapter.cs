@@ -18,6 +18,7 @@ public static class EmotionAdapter
 
             case Emotion.Angry:
             case Emotion.Disgust:
+            case Emotion.Sad:
                 return GameProgress.FacialExpression.Angry;
 
             default:
