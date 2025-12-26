@@ -23,9 +23,12 @@ public class EmotionDetectUI : MonoBehaviour
     {
         switch (e)
         {
+            //这里负责pointer指向
             case Emotion.Neutral: return 0;
             case Emotion.Happy: return 1;
             case Emotion.Surprised: return 2;
+            case Emotion.Disgust:
+            case Emotion.Sad:
             case Emotion.Angry: return 3;
             default: return -1;
         }
@@ -113,13 +116,8 @@ public class EmotionDetectUI : MonoBehaviour
         //进度归零
         for (int i = 0; i < EmotionFillers.Count; i++)
         {
-            EmotionFillers[i].fillAmount = Mathf.MoveTowards(
-                EmotionFillers[i].fillAmount,
-                0,
-                Time.deltaTime * 1.5f
-            );
+            EmotionFillers[i].fillAmount = 0;
         }
-
         var gameExpression = EmotionAdapter.ToGameExpression(emotion);
         emotionInGameUI.ConfirmExpression(gameExpression);
 
@@ -133,6 +131,8 @@ public class EmotionDetectUI : MonoBehaviour
             Emotion.Happy => 1,
             Emotion.Surprised => 2,
             Emotion.Angry => 3,
+            Emotion.Sad => 3,
+            Emotion.Disgust => 3,
             _ => -1
         };
 

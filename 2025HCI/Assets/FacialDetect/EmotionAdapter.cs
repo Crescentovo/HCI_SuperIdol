@@ -16,6 +16,7 @@ public static class EmotionAdapter
             case Emotion.Surprised:
                 return GameProgress.FacialExpression.Surprised;
 
+            //UpdateCharacterExpression中控制实时人脸表情变化
             case Emotion.Angry:
             case Emotion.Disgust:
             case Emotion.Sad:
